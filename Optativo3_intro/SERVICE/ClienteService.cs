@@ -32,9 +32,13 @@ namespace Services.Logica
         {
             if (cliente == null)
                 return false;
-            if (string.IsNullOrEmpty(cliente.nombre))
+            if (string.IsNullOrEmpty(cliente.nombre) && cliente.nombre.Length < 3)
                 return false;
-            if (string.IsNullOrEmpty(cliente.apellido) && cliente.nombre.Length < 2)
+            if (string.IsNullOrEmpty(cliente.apellido) && cliente.apellido.Length < 3)
+                return false;
+            if (cliente.cedula.ToString().Length < 10 && cliente.cedula !=null)
+                return false;
+            if (cliente.celular.ToString().Length < 10)
                 return false;
 
             return true;

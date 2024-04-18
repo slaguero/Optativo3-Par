@@ -13,7 +13,7 @@ namespace Repository.Data.Clientes
         public string apellido { get; set; }
        // public string cedula { get; set; }
         public string direccion { get; set; }
-        public string celular { get; set; }
+        public decimal celular { get; set; }
         public string correo { get; set; }
         public string estado { get; set; }
         public decimal cedula { get; set; }
